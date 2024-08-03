@@ -1,21 +1,27 @@
 package club.siwoo.spaghetti;
 
+import ga.strikepractice.StrikePractice;
+import ga.strikepractice.api.StrikePracticeAPI;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class SPaghetti extends JavaPlugin {
+public final class SPaghetti extends JavaPlugin implements Listener {
+
+	StrikePracticeAPI api = StrikePractice.getAPI();
 
 	@Override
 	public void onEnable() {
+		getServer().getPluginManager().registerEvents(this, this);
 		getLogger().info("Spaghetti Info: spaghetti.siwoo.club");
 	}
 
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		Player player = event.getPlayer();
-		player.sendMessage(ChatColor.BLUE + "This server is running SPaghetti. Check " + "spaghetti.siwoo.club" + " for more info");
+		player.sendMessage(ChatColor.BLUE + "This server is running SPaghetti. Check " + ChatColor.AQUA + "spaghetti.siwoo.club" + ChatColor.BLUE + " for more info");
 	}
 }

@@ -91,6 +91,14 @@
             <artifactId>Foundation</artifactId>
             <version>${foundation.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>ga.strikepractice</groupId>
+            <artifactId>StrikePractice</artifactId>
+            <version>3.9.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/strikepractice-api.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <!-- DO NOT EDIT unless instructed to do so or you know what you're doing. -->

@@ -12,6 +12,7 @@
 		<!-- Ninja: We read pom.xml file to find the Foundation version to use -->
 		<xmlproperty file="pom.xml" prefix="pom" keeproot="false" />
 		<property name="foundation.version" value="${pom.properties.foundation.version}"/>
+		<property name="strikepracticeapi" value="strikepractice-api"/>
 		
 		<!-- Change the name="" key on the top to your plugin's name 
 		     and edit the path below to where your server is located.
@@ -32,8 +33,8 @@
 	    	<!-- You can copy the <jar> block above multiple times if you have multi-version testing servers -->
 	    	<jar jarfile="/Users/kangarko/Test Servers/1.8.8/plugins/${ant.project.name}.jar" basedir="./target/classes/" includes="**/*">
 	    		<zipgroupfileset dir="${user.home}/.m2/repository/com/github/kangarko/Foundation/${foundation.version}/" includes="**/*${foundation.version}.jar" />
+				<zipgroupfileset dir="libs" includes="strikepractice-api.jar" />
 	    		<!--<fileset dir="../Foundation/target/classes"/>-->
 	        </jar>
 		</target>
-
-</project> 
+</project>
