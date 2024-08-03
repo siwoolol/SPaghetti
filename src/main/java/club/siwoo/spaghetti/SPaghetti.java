@@ -18,7 +18,14 @@ public final class SPaghetti extends JavaPlugin implements Listener {
 	@Override
 	public void onEnable() {
 		registerEvents();
+		registerCommands();
 		getLogger().info("SPaghetti Plugin Info: spaghetti.siwoo.club");
+	}
+
+	@EventHandler
+	public void onPlayerJoin(PlayerJoinEvent event) {
+		Player player = event.getPlayer();
+		player.sendMessage(ChatColor.BLUE + "This server is running SPaghetti. Check " + ChatColor.AQUA + "spaghetti.siwoo.club" + ChatColor.BLUE + " for more info");
 	}
 
 	private void registerEvents() {
@@ -27,9 +34,7 @@ public final class SPaghetti extends JavaPlugin implements Listener {
 		getServer().getPluginManager().registerEvents(new FightEnd(), this);
 	}
 
-	@EventHandler
-	public void onPlayerJoin(PlayerJoinEvent event) {
-		Player player = event.getPlayer();
-		player.sendMessage(ChatColor.BLUE + "This server is running SPaghetti. Check " + ChatColor.AQUA + "spaghetti.siwoo.club" + ChatColor.BLUE + " for more info");
+	private void registerCommands() {
+		getCommand("fly").setExecutor(new Flight(this));
 	}
 }

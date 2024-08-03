@@ -30,4 +30,7 @@ softdepend: [AuthMe, BanManager, BungeeChatAPI, CMI, DiscordSRV, Factions, Feuda
 # The commands are built at runtime so you can change them easily within the settings.
 # Do not change anything in here, you will break the plugin and get no support.
 #
-commands:  
+commands:
+  fly:
+    usage: /fly
+    description: "Fly"
