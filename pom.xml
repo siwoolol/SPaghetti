@@ -24,7 +24,7 @@
         <author>siwoo</author>
 
         <!-- Change to the full path where your main plugin class is located. -->
-        <main.class>club.siwoo.spaghetti.SPaghetti</main.class>
+        <main.class>club.siwoo.spaghetti.main</main.class>
 
         <!-- Change the Java version this plugin is built on.
 
@@ -77,18 +77,18 @@
         <!-- No need to import Spigot/Paper API since Foundation includes latest Spigot API. If you need
             to code for another version or want to use Paper API, place it here (above Foundation) as per
             https://github.com/PaperMC/Paper?tab=readme-ov-file#maven -->
-        <dependency>
+        <!-- <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
             <version>1.8.8</version>
             <scope>provided</scope>
-        </dependency>
+        </dependency> -->
 
         <!-- The Foundation library. It contains the latest Spigot API and a ton of useful dependencies
              Please see the maven-shade-plugin below and configure inclusions properly otherwise
              your file will shade with all the dependencies resulting it crashes and huge file size. -->
         <dependency>
-            <groupId>${foundation.path}</groupId>
+            <groupId>com.github.kangarko</groupId>
             <artifactId>Foundation</artifactId>
             <version>${foundation.version}</version>
         </dependency>

@@ -2,6 +2,7 @@ package club.siwoo.spaghetti;
 
 import club.siwoo.spaghetti.design.FightEnd;
 import club.siwoo.spaghetti.design.WarningMessage;
+import club.siwoo.spaghetti.perms.Flight;
 import ga.strikepractice.StrikePractice;
 import ga.strikepractice.api.StrikePracticeAPI;
 import org.bukkit.ChatColor;
@@ -11,9 +12,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class SPaghetti extends JavaPlugin implements Listener {
-
-	StrikePracticeAPI api = StrikePractice.getAPI();
+public final class main extends JavaPlugin implements Listener {
 
 	@Override
 	public void onEnable() {

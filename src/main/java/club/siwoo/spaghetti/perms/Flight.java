@@ -1,6 +1,6 @@
 package club.siwoo.spaghetti.perms;
 
-import club.siwoo.spaghetti.SPaghetti;
+import club.siwoo.spaghetti.main;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.ChatColor;
@@ -13,9 +13,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Flight extends JavaPlugin implements Listener, CommandExecutor {
-    private final SPaghetti plugin;
+    private final main plugin;
 
-    public Flight(SPaghetti plugin) {
+    public Flight(main plugin) {
         this.plugin = plugin;
     }
 
