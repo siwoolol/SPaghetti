@@ -75,7 +75,7 @@
         </dependency>-->
 
         <!-- No need to import Spigot/Paper API since Foundation includes latest Spigot API. If you need
-            to code for another version or want to use Paper API, place it here (above Foundation) as per 
+            to code for another version or want to use Paper API, place it here (above Foundation) as per
             https://github.com/PaperMC/Paper?tab=readme-ov-file#maven -->
         <!--<dependency>
             <groupId>io.papermc.paper</groupId>
@@ -121,8 +121,8 @@
                      https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
                 <version>3.13.0</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
             <plugin>
