@@ -34,3 +34,9 @@ commands:
   fly:
     usage: /fly
     description: "Fly"
+  lobby:
+    aliases:
+      - spawn
+      - l
+    usage: /lobby
+    description: "Goes Back To The Lobby"

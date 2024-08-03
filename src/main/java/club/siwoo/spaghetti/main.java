@@ -2,6 +2,7 @@ package club.siwoo.spaghetti;
 
 import club.siwoo.spaghetti.design.FightEnd;
 import club.siwoo.spaghetti.design.WarningMessage;
+import club.siwoo.spaghetti.essentials.Lobby;
 import club.siwoo.spaghetti.perms.Flight;
 import ga.strikepractice.StrikePractice;
 import ga.strikepractice.api.StrikePracticeAPI;
@@ -35,5 +36,8 @@ public final class main extends JavaPlugin implements Listener {
 
 	private void registerCommands() {
 		getCommand("fly").setExecutor(new Flight(this));
+		getCommand("lobby").setExecutor(new Lobby());
+		getCommand("spawn").setExecutor(new Lobby());
+		getCommand("l").setExecutor(new Lobby());
 	}
 }

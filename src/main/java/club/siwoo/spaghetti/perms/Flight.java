@@ -9,10 +9,9 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class Flight extends JavaPlugin implements Listener, CommandExecutor {
+public class Flight implements CommandExecutor {
+
     private final main plugin;
 
     public Flight(main plugin) {
@@ -34,7 +33,13 @@ public class Flight extends JavaPlugin implements Listener, CommandExecutor {
             return true;
         }
 
-        player.setFlying(player.getAllowFlight());
+        if (!player.getAllowFlight()) {
+            player.sendMessage(ChatColor.GREEN + "Flight Enabled!");
+            player.setAllowFlight(true);
+        } else if (player.getAllowFlight()) {
+            player.sendMessage(ChatColor.RED + "Flight Disabled!");
+            player.setAllowFlight(false);
+        }
         return true;
     }
 }
