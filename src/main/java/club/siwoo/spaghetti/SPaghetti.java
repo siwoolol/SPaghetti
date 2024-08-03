@@ -1,5 +1,7 @@
 package club.siwoo.spaghetti;
 
+import club.siwoo.spaghetti.design.FightEnd;
+import club.siwoo.spaghetti.design.WarningMessage;
 import ga.strikepractice.StrikePractice;
 import ga.strikepractice.api.StrikePracticeAPI;
 import org.bukkit.ChatColor;
@@ -15,8 +17,14 @@ public final class SPaghetti extends JavaPlugin implements Listener {
 
 	@Override
 	public void onEnable() {
+		registerEvents();
+		getLogger().info("SPaghetti Plugin Info: spaghetti.siwoo.club");
+	}
+
+	private void registerEvents() {
 		getServer().getPluginManager().registerEvents(this, this);
-		getLogger().info("Spaghetti Info: spaghetti.siwoo.club");
+		getServer().getPluginManager().registerEvents(new WarningMessage(), this);
+		getServer().getPluginManager().registerEvents(new FightEnd(), this);
 	}
 
 	@EventHandler
