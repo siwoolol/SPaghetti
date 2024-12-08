@@ -9,11 +9,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
 
 public class FightEnd extends JavaPlugin implements Listener {
     private final List<String> defeatMessages = new ArrayList<>();
@@ -38,13 +36,13 @@ public class FightEnd extends JavaPlugin implements Listener {
         String selectedMessage = shuffled.get(0);
 
         // Winner Prompt
-        w.playSound((w.getLocation()), Sound.ENTITY_DRAGON_FIREBALL_EXPLODE, 1, 1);
-        l.sendTitle(ChatColor.GREEN + "VICTORY", ChatColor.GREEN + w.getName() + ChatColor.WHITE + selectedMessage + ChatColor.GREEN + l.getName(), 0, 20, 0);
+        w.playSound((w.getLocation()), Sound.EXPLODE, 1, 1);
+        l.sendTitle(ChatColor.GREEN + "VICTORY", ChatColor.GREEN + w.getName() + ChatColor.WHITE + selectedMessage + ChatColor.GREEN + l.getName());
         w.sendMessage(ChatColor.GREEN + "You Won the Match");
 
         // Loser Prompt
-        l.playSound((l.getLocation()), Sound.ENTITY_DRAGON_FIREBALL_EXPLODE, 1, 1);
-        l.sendTitle(ChatColor.RED + "DEFEAT", ChatColor.RED + w.getName() + ChatColor.WHITE + selectedMessage + ChatColor.GREEN + l.getName(), 0, 20, 0);
+        l.playSound((l.getLocation()), Sound.EXPLODE, 1, 1);
+        l.sendTitle(ChatColor.RED + "DEFEAT", ChatColor.RED + w.getName() + ChatColor.WHITE + selectedMessage + ChatColor.GREEN + l.getName());
         l.sendMessage(ChatColor.RED + "You Lost the Match");
     }
 
