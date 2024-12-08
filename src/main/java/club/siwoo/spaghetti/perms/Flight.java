@@ -1,6 +1,6 @@
 package club.siwoo.spaghetti.perms;
 
-import club.siwoo.spaghetti.main;
+import club.siwoo.spaghetti.SPaghetti;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.ChatColor;
@@ -12,9 +12,9 @@ import org.bukkit.entity.Player;
 
 public class Flight implements CommandExecutor {
 
-    private final main plugin;
+    private final SPaghetti plugin;
 
-    public Flight(main plugin) {
+    public Flight(SPaghetti plugin) {
         this.plugin = plugin;
     }
 

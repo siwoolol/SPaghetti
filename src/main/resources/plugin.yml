@@ -37,6 +37,7 @@ commands:
   lobby:
     aliases:
       - spawn
+      - leave
       - l
     usage: /lobby
     description: "Goes Back To The Lobby"
