@@ -25,13 +25,19 @@ softdepend: [PlaceholderAPI, ProtocolLib]
 # Do not change anything in here, you will break the plugin and get no support.
 #
 commands:
+  forcewin:
+    usage: /forcewin [round/match]
+    aliases: fw
+    description: "Force Win The Fight/Round (Fight if Unspecified)"
+
   fly:
     usage: /fly
     description: "Fly"
   lobby:
     usage: /lobby
-    aliases:
-      - spawn
-      - leave
-      - l
+    aliases: [spawn, leave, l]
     description: "Goes Back To The Lobby"
+  leaderboard:
+    usage: /leaderboard
+    aliases: [leaderboards, lb]
+    description: "Displays the Leaderboard GUI"

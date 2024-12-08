@@ -28,8 +28,8 @@ public class Flight implements CommandExecutor {
         }
 
         if (args.length != 0) {
-            player.playSound((player.getLocation()), Sound.ENTITY_ENDERMAN_TELEPORT, 1, 1);
-            player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(ChatColor.RED + "Usage: /fly"));
+            player.playSound((player.getLocation()), Sound.ENDERMAN_TELEPORT, 1, 1);
+            player.sendMessage("Usage: /fly");
             return true;
         }
 
