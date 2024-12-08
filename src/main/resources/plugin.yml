@@ -1,14 +1,8 @@
-#
-# This is the file your server opens to find the main class of your 
-# plugin and its information. We automatically replace variables here 
-# from your pom.xml file. YOU GENERALLY DO NOT NEED TO EDIT THIS.
-#
-# See https://www.spigotmc.org/wiki/plugin-yml/ for more information.
-# 
-name: ${project.name}
+name: SPaghetti
 version: ${project.version}
-main: ${main.class}
-author: ${author}
+main: club.siwoo.spaghetti.SPaghetti
+author: siwoolol
+website: [siwoo.lol, siwoo.club]
 
 # DO NOT EDIT. This api-version is used for maximum backward compatibility.
 api-version: 1.13
@@ -35,9 +29,9 @@ commands:
     usage: /fly
     description: "Fly"
   lobby:
+    usage: /lobby
     aliases:
       - spawn
       - leave
       - l
-    usage: /lobby
     description: "Goes Back To The Lobby"

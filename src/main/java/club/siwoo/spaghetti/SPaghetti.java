@@ -34,9 +34,5 @@ public final class SPaghetti extends JavaPlugin implements Listener {
 	private void registerCommands() {
 		getCommand("fly").setExecutor(new Flight(this));
 		getCommand("lobby").setExecutor(new Lobby());
-		getCommand("spawn").setExecutor(new Lobby());
-		getCommand("leave").setExecutor(new Lobby());
-		getCommand("l").setExecutor(new Lobby());
-		getCommand("d").setExecutor(new Lobby());
 	}
 }
